@@ -9,7 +9,7 @@ user "#{node[:bastion][:connection_user_name]}" do
   comment 'bastion user'
   home "/home/#{node[:bastion][:connection_user_name]}"
   manage_home true
-  shell '/sbin/nologin'
+  shell '/bin/bash'
 end
 
 # Create the bastion user's .ssh directory
