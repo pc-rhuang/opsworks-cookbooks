@@ -14,6 +14,8 @@ recipe "bastion::remove_user",
   "Remove a user from ssh to bastion server"
 recipe "bastion::test_adduser",
   "Test iterate to add user"
+recipe "bastion::query_user",
+  "Test the query user "
 
 # Attributes
 
