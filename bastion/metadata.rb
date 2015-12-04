@@ -5,8 +5,14 @@ description      "Installs/Configures Bastion host"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          "0.0.1"
 
+supports "centos"
+supports "redhat"
 
 
+depends "rightscale"
+depends "python"
+depends "sys_firewall"
+depends "iptables", ">= 1.0.0"
 
 recipe "bastion::default",
   "Install the default dependencies for bastion"
@@ -14,6 +20,8 @@ recipe "bastion::add_user",
   "Add a new user can ssh to bastion server"
 recipe "bastion::remove_user",
   "Remove a user from ssh to bastion server"
+recipe "bastion::test_adduser"
+  "Test iterate to add user"
 
 # Attributes
 
