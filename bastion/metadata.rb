@@ -3,7 +3,7 @@ maintainer_email "sysops@personalcapital.com"
 license          "Copyright RightScale, Inc. All rights reserved."
 description      "Installs/Configures Bastion host"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "0.0.1"
+version          "0.0.2"
 
 
 recipe "bastion::default",

@@ -1,5 +1,9 @@
+#
+# Cookbook Name:: bastion::test_adduser
+#
 
 node[:users] = [ {:username => 'rhuang', :pubkey => ''}, {:username => 'romi', :pubkey => ''} ]
+
 node[:users].each do |user|
   puts "in loop for #{user['username']}"
   bash "create_user" do
