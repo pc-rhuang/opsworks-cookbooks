@@ -12,10 +12,6 @@ node[:bastion][:users].each do |user|
       puts "running 'useradd' for #{user['username']}"
       "useradd #{user['username']}"
     end
-    not_if do
-      puts "checking /etc/passwd for #{user['username']}"
-      "cat /etc/passwd | grep #{user['username']}"
-    end
   end
 end
 
