@@ -8,6 +8,6 @@ ruby_block "query_ldap" do
       Chef::Resource::RubyBlock.send(:include, Chef::Mixin::ShellOut)      
       ldap_command = 'echo node[:bastion][:connection_user_name]'
       ldap_command_out = shell_out(ldap_command)
-      Chef::Log.info  ldap_command.stdout
+      Chef::Log.info  ldap_command_out.stdout
     end
 end

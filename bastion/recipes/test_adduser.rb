@@ -6,7 +6,7 @@ node.default[:bastion][:users] = [ {:username => 'rhuang', :pubkey => ''}, {:use
 
 node[:bastion][:users].each do |user|
   puts "in loop for #{user['username']}"
-  bash "create_user" do
+  bash "create_user_#{user}" do
     user "root"
     code do
       puts "running 'useradd' for #{user['username']}"
